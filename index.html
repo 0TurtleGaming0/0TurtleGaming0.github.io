@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b14">
+  <title>TurtleGaming Links</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    /* ⭐ FIXED FULLSCREEN BACKGROUND (iOS SAFE) */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+
+      background: linear-gradient(-45deg, #0b0b14, #1b1b3a, #2a0f3d, #001f3f);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: -1;
+      animation: floatGlow 10s infinite alternate ease-in-out;
+    }
+
+    body::before {
+      background: rgba(0, 242, 234, 0.15);
+      left: 10%;
+      top: 10%;
+    }
+
+    body::after {
+      background: rgba(255, 0, 80, 0.15);
+      right: 10%;
+      bottom: 10%;
+      animation-duration: 14s;
+    }
+
+    @keyframes floatGlow {
+      from { transform: translate(0px, 0px) scale(1); }
+      to { transform: translate(30px, 40px) scale(1.2); }
+    }
+
+    .card {
+      width: min(340px, 90vw);
+      padding: 25px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .profile {
+      width: 85px;
+      height: 85px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.3);
+      box-shadow: 0 0 20px rgba(0,242,234,0.5);
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 20px;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      background: rgba(255,255,255,0.08);
+      transition: 0.25s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .links a:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.18);
+    }
+
+    .twitch { color: #a970ff; }
+    .youtube { color: #ff3b3b; }
+    .tiktok { color: #00f2ea; }
+    .discord { color: #5865F2; }
+    .instagram { color: #ff4d94; }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ⭐ background layer (THIS fixes iPhone issue) -->
+  <div class="bg"></div>
+
+  <div class="card">
+    <img src="profile.png" class="profile" alt="TurtleGaming">
+
+    <h1>TurtleGaming</h1>
+    <p>Welcome to my official links</p>
+
+    <div class="links">
+
+      <a href="https://www.twitch.tv/turtlegaming3114" target="_blank">
+        <i class="fa-brands fa-twitch twitch"></i> Twitch
+      </a>
+
+      <a href="https://youtube.com/@turtlegaming3114" target="_blank">
+        <i class="fa-brands fa-youtube youtube"></i> YouTube
+      </a>
+
+      <a href="https://www.tiktok.com/@turtlegaming3114" target="_blank">
+        <i class="fa-brands fa-tiktok tiktok"></i> TikTok
+      </a>
+
+      <a href="https://discord.gg/placeholder" target="_blank">
+        <i class="fa-brands fa-discord discord"></i> Discord
+      </a>
+
+      <a href="https://www.instagram.com/1_turtlegaming_1" target="_blank">
+        <i class="fa-brands fa-instagram instagram"></i> Instagram
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
